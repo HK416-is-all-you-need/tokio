@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1606139776051,
+  "lastUpdate": 1606141150126,
   "repoUrl": "https://github.com/HK416-is-all-you-need/tokio",
   "entries": {
     "sync_semaphore": [
@@ -189,6 +189,62 @@ window.BENCHMARK_DATA = {
             "name": "uncontented_unbounded",
             "value": 799714,
             "range": "± 2080",
+            "unit": "ns/iter"
+          }
+        ]
+      }
+    ],
+    "sync_rwlock": [
+      {
+        "commit": {
+          "author": {
+            "email": "eliza@buoyant.io",
+            "name": "Eliza Weisman",
+            "username": "hawkw"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f927f01a34d7cedf0cdc820f729a7a6cd56e83dd",
+          "message": "macros: fix rustfmt on 1.48.0 (#3160)\n\n## Motivation\r\n\r\nLooks like the Rust 1.48.0 version of `rustfmt` changed some formatting\r\nrules (fixed some bugs?), and some of the code in `tokio-macros` is no\r\nlonger correctly formatted. This is breaking CI.\r\n\r\n## Solution\r\n\r\nThis commit runs rustfmt on Rust 1.48.0. This fixes CI.\r\n\r\nCloses #3158",
+          "timestamp": "2020-11-20T10:19:26-08:00",
+          "tree_id": "bd0243a653ee49cfc50bf61b00a36cc0fce6a414",
+          "url": "https://github.com/HK416-is-all-you-need/tokio/commit/f927f01a34d7cedf0cdc820f729a7a6cd56e83dd"
+        },
+        "date": 1606141149299,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "read_concurrent_contended",
+            "value": 1073,
+            "range": "± 181",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_contended_multi",
+            "value": 17178,
+            "range": "± 6672",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended",
+            "value": 1129,
+            "range": "± 165",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended_multi",
+            "value": 17688,
+            "range": "± 6721",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_uncontended",
+            "value": 621,
+            "range": "± 140",
             "unit": "ns/iter"
           }
         ]
